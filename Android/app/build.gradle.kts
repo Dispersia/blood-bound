@@ -64,12 +64,15 @@ android {
         jniLibs.excludes.add("lib/*/libdummy.so")
     }
     sourceSets {
-      getByName("androidTest") {
+        getByName("androidTest") {
         jniLibs.srcDir("${layout.buildDirectory}/rustJniLibs/android")
-      }
-      getByName("debug") {
+        }
+        getByName("debug") {
         jniLibs.srcDir("${layout.buildDirectory}/rustJniLibs/android")
-      }
+        }
+        getByName("main") {
+            assets.srcDirs("../../assets")
+        }
     }
 }
 
