@@ -1,0 +1,14 @@
+**/target
+**/dist
+**/build
+Cargo.lock
+
+**/.idea
+*.iml
+**/.gradle
+**/.DS_Store
+**/.cxx
+
+Android/local.properties
+Android/captures
+Android/.externalNativeBuild
