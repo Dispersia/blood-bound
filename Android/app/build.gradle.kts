@@ -57,7 +57,7 @@ android {
         jvmTarget = "11"
     }
     buildFeatures {
-      viewBinding = true
+        viewBinding = true
         prefab = true
     }
     packaging {
@@ -65,10 +65,10 @@ android {
     }
     sourceSets {
         getByName("androidTest") {
-        jniLibs.srcDir("${layout.buildDirectory}/rustJniLibs/android")
+            jniLibs.srcDir("${layout.buildDirectory}/rustJniLibs/android")
         }
         getByName("debug") {
-        jniLibs.srcDir("${layout.buildDirectory}/rustJniLibs/android")
+            jniLibs.srcDir("${layout.buildDirectory}/rustJniLibs/android")
         }
         getByName("main") {
             assets.srcDirs("../../assets")
@@ -84,9 +84,9 @@ cargo {
 }
 
 tasks.whenTaskAdded {
-  if (name == "javaPreCompileDebug" || name == "javaPreCompilerRelease") {
-    dependsOn("cargoBuild")
-  }
+    if (name == "javaPreCompileDebug" || name == "javaPreCompilerRelease") {
+        dependsOn("cargoBuild")
+    }
 }
 
 dependencies {
